@@ -4,9 +4,9 @@
 #include "esphome/components/output/float_output.h"
 
 namespace esphome {
-	namespace empty_float_output {
+	namespace passthru_float_output {
 
-		class EmptyFloatOutput: public output::FloatOutput, public Component {
+		class PassthruFloatOutput: public output::FloatOutput, public Component {
 		public:
 			float valx;
 			void setup() override;
@@ -14,5 +14,5 @@ namespace esphome {
 			void dump_config() override;
 			float get_value();
 		};
-	} //namespace empty_float_output
+	} //namespace passthru_float_output
 } //namespace esphome

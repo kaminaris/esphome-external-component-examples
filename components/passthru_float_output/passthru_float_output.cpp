@@ -6,22 +6,22 @@ namespace passthru_float_output {
 
 static const char *TAG = "passthru_float_output.output";
 
-void EmptyFloatOutput::setup(){
+void PassthruFloatOutput::setup(){
 
 }
 
-void EmptyFloatOutput::write_state(float state){
+void PassthruFloatOutput::write_state(float state){
 	valx = state;
 }
 
-void EmptyFloatOutput::dump_config() {
-    ESP_LOGCONFIG(TAG, "Empty custom float output");
+void PassthruFloatOutput::dump_config() {
+    ESP_LOGCONFIG(TAG, "Passthru custom float output");
 }
 
-float EmptyFloatOutput::get_value() {
+float PassthruFloatOutput::get_value() {
 	return valx;
 }
 
-} //namespace empty_float_output
+} //namespace passthru_float_output
 } //namespace esphome
 
